@@ -1,0 +1,7 @@
+## Top 3 industries based on the number of unicorn companies in 2019, 2020 and 2021:
+
+WITH top_3_industries (industry,num_unicorns) AS(
+
+SELECT industry,
+       
+       
