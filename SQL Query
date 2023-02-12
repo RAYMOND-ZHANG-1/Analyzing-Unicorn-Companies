@@ -3,5 +3,9 @@
 WITH top_3_industries (industry,num_unicorns) AS(
 
 SELECT industry,
-       
+       COUNT(*) AS num_unicorns
+  FROM industries
+ GROUP BY industry
+ LIMIT 3),
+ 
        
