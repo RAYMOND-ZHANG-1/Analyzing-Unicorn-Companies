@@ -6,7 +6,7 @@ You have been asked to support an investment firm by analyzing trends in high-gr
 
 You have been given access to their unicorns database, which contains the following tables:
 
-# dates
+### dates
 
 Column	            Description
 
@@ -16,23 +16,36 @@ date_joined,	        The date that the company became a unicorn.
 
 year_founded,	      The year that the company was founded.
 
-# funding
+### funding
 
 Column	Description
-company_id	A unique ID for the company.
-valuation	Company value in US dollars.
-funding	The amount of funding raised in US dollars.
-select_investors	A list of key investors in the company.
-industries
+
+company_id,	A unique ID for the company.
+
+valuation,	Company value in US dollars.
+
+funding,	The amount of funding raised in US dollars.
+
+select_investors,	A list of key investors in the company.
+
+## industries
 
 Column	Description
-company_id	A unique ID for the company.
-industry	The industry that the company operates in.
-companies
+
+company_id,	A unique ID for the company.
+
+industry,	The industry that the company operates in.
+
+### companies
 
 Column	Description
-company_id	A unique ID for the company.
-company	The name of the company.
-city	The city where the company is headquartered.
-country	The country where the company is headquartered.
+
+company_id,	A unique ID for the company.
+
+company,	The name of the company.
+
+city,	The city where the company is headquartered.
+
+country,	The country where the company is headquartered.
+
 continent	The continent where the company is headquartered.
