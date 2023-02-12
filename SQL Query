@@ -14,7 +14,8 @@ SELECT industry,
  SELECT industry,
         EXTRACT(YEAR FROM date_joined) AS year,
         COUNT(*) AS num_unicorns,
-        AVG(valuation) AS average_valuation
+        AVG(valuation) AS average_valuation,
+        ROW_NUMBER()OVER(PARTITION BY industry)
    FROM industries AS a
   INNER JOIN dates AS b
      ON a.company_id = b.company_id
