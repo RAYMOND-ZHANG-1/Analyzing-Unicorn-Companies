@@ -1,11 +1,36 @@
 ## Top 3 industries based on the number of unicorn companies in 2019, 2020 and 2021:
 
 WITH top_3_industries (industry,num_unicorns) AS(
-
 SELECT industry,
        COUNT(*) AS num_unicorns
-  FROM industries
+  FROM industries AS a
+ INNER JOIN dates AS b
+    ON a.company_id = b.company_id
+ WHERE EXTRACT(YEAR FROM date_joined) IN ('2019','2020','2021')
  GROUP BY industry
  LIMIT 3),
  
-       
+     yearly_ranked (industry,year,num_unicorns,average_valuation) AS(
+ SELECT industry,
+        EXTRACT(YEAR FROM date_joined) AS year,
+        COUNT(*) AS num_unicorns,
+        AVG(valuation) AS average_valuation
+   FROM industries AS a
+  INNER JOIN dates AS b
+     ON a.company_id = b.company_id
+  INNER JOIN funding AS c
+     ON b.company_id = c.company_id
+  WHERE industry IN (SELECT industry 
+                       FROM top_3_industries)
+    AND EXTRACT(YEAR FROM date_joined) IN ('2019','2020','2021')
+  GROUP BY indystry, year
+  ORDER BY industry, year DESC)
+ 
+ SELECT industry,
+        year,
+        num_unicorns,
+        ROUND(average_valuation/1000000000,2) AS average_valuation_billions
+   FROM yearly_ranked
+   
+   
+   
