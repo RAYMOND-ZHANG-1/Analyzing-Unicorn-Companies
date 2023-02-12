@@ -11,7 +11,9 @@ dates
 Column	Description
 
 company_id	A unique ID for the company.
+
 date_joined	The date that the company became a unicorn.
+
 year_founded	The year that the company was founded.
 
 funding
