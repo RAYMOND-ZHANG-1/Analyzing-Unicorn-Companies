@@ -6,7 +6,7 @@ You have been asked to support an investment firm by analyzing trends in high-gr
 
 You have been given access to their unicorns database, which contains the following tables:
 
-### dates
+## dates
 
 ##### Column	            Description
 
@@ -16,7 +16,7 @@ date_joined--        The date that the company became a unicorn.
 
 year_founded--     The year that the company was founded.
 
-### funding
+## funding
 
 ##### Column	Description
 
@@ -36,7 +36,7 @@ company_id--A unique ID for the company.
 
 industry--The industry that the company operates in.
 
-### companies
+## companies
 
 ##### Column	Description
 
