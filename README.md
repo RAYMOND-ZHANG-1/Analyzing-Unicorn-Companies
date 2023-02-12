@@ -8,13 +8,13 @@ You have been given access to their unicorns database, which contains the follow
 
 dates
 
-Column	Description
+Column	            Description
 
-company_id	A unique ID for the company.
+company_id	        A unique ID for the company.
 
-date_joined	The date that the company became a unicorn.
+date_joined	        The date that the company became a unicorn.
 
-year_founded	The year that the company was founded.
+year_founded	      The year that the company was founded.
 
 funding
 
